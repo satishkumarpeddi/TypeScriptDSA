@@ -1,27 +1,31 @@
-class TreeNode {
+class TreeNodeStructure {
   val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
+  left: TreeNodeStructure | null;
+  right: TreeNodeStructure | null;
   height: number;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+  constructor(
+    val?: number,
+    left?: TreeNodeStructure | null,
+    right?: TreeNodeStructure | null
+  ) {
     this.val = val === undefined ? 0 : val;
     this.left = left === undefined ? null : left;
     this.right = right === undefined ? null : right;
     this.height = 0;
   }
 }
-let root: TreeNode | null = null;
+let root: TreeNodeStructure | null = null;
 const elements: number[] = [3, 5, 18, 9, 19, 11, 12, 99, 14, 51];
 const delelements: number[] = [3, 5, 18];
-let height = (root: TreeNode | null): number => {
+let height = (root: TreeNodeStructure | null): number => {
   if (root === null) return 0;
   return root.height;
 };
-let balanaceFactor = (root: TreeNode | null): number => {
+let balanaceFactor = (root: TreeNodeStructure | null): number => {
   if (root === null) return 0;
   return height(root.left) - height(root.right);
 };
-let rightRotation = (y: TreeNode | null): TreeNode => {
+let rightRotation = (y: TreeNodeStructure | null): TreeNodeStructure => {
   if (y === null) throw new Error("y is null");
   let x = y?.left;
   if (x === null) throw new Error("x is null");
@@ -32,7 +36,7 @@ let rightRotation = (y: TreeNode | null): TreeNode => {
   y.height = 1 + Math.max(height(y.left), height(y.right));
   return x;
 };
-let leftRotation = (x: TreeNode | null): TreeNode => {
+let leftRotation = (x: TreeNodeStructure | null): TreeNodeStructure => {
   if (x === null) throw new Error("x is null");
   let y = x?.right;
   if (y === null) throw new Error("y is null");
@@ -43,8 +47,11 @@ let leftRotation = (x: TreeNode | null): TreeNode => {
   y.height = 1 + Math.max(height(y.left), height(y.right));
   return y;
 };
-let insert = (root: TreeNode | null, key: number | 0): TreeNode => {
-  if (root == null) return new TreeNode(key);
+let insert = (
+  root: TreeNodeStructure | null,
+  key: number | 0
+): TreeNodeStructure => {
+  if (root == null) return new TreeNodeStructure(key);
   if (key < root.val) {
     root.left = insert(root.left, key);
   } else if (key > root.val) {
@@ -71,15 +78,18 @@ let insert = (root: TreeNode | null, key: number | 0): TreeNode => {
   }
   return root;
 };
-let minValueNode = (root: TreeNode | null): TreeNode => {
-  let curr: TreeNode | null = root;
+let minValueNode = (root: TreeNodeStructure | null): TreeNodeStructure => {
+  let curr: TreeNodeStructure | null = root;
   while (curr && curr.left != null) curr = curr.left;
   if (curr) return curr;
-  return new TreeNode(0);
+  return new TreeNodeStructure(0);
 };
-let deleteMethod = (root: TreeNode | null, key: number | 0): TreeNode => {
+let deleteMethod = (
+  root: TreeNodeStructure | null,
+  key: number | 0
+): TreeNodeStructure => {
   if (root == null) {
-    return new TreeNode();
+    return new TreeNodeStructure();
   }
   if (key < root.val) {
     root.left = deleteMethod(root.left, key);
@@ -125,31 +135,31 @@ let levelOrderList: number[] = [];
 let preOrderList: number[] = [];
 let postOrderList: number[] = [];
 insertUtil(elements);
-const inorderTraversal = (root: TreeNode | null): void => {
+const inorderTraversal = (root: TreeNodeStructure | null): void => {
   if (root == null) return;
   inorderTraversal(root.left);
   if (root.val !== 0) inOrderList.push(root.val);
   inorderTraversal(root.right);
 };
-const preorderTraversal = (root: TreeNode | null): void => {
+const preorderTraversal = (root: TreeNodeStructure | null): void => {
   if (root == null) return;
   if (root.val !== 0) preOrderList.push(root.val);
   preorderTraversal(root.left);
   preorderTraversal(root.right);
 };
-const postorderTraversal = (root: TreeNode | null): void => {
+const postorderTraversal = (root: TreeNodeStructure | null): void => {
   if (root == null) return;
   postorderTraversal(root.left);
   postorderTraversal(root.right);
   if (root.val !== 0) postOrderList.push(root.val);
 };
-const levelorderTraversal = (root: TreeNode | null): void => {
+const levelorderTraversal = (root: TreeNodeStructure | null): void => {
   if (root == null) return;
-  const queue: TreeNode[] = [root];
+  const queue: TreeNodeStructure[] = [root];
   while (queue.length > 0) {
     let levelSize: number = queue.length;
     for (let i = 0; i < levelSize; i++) {
-      const node: TreeNode | undefined = queue.shift();
+      const node: TreeNodeStructure | undefined = queue.shift();
       if (node != undefined) if (node.val != 0) levelOrderList.push(node.val);
       if (node?.left) queue.push(node.left);
       if (node?.right) queue.push(node.right);
