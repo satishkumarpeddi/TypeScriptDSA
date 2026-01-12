@@ -1,4 +1,4 @@
-function countBST(n: number): number {
+function countBSTOfDP(n: number): number {
   let dp: number[] = [];
   dp[0] = 1; //Base Condition
   dp[1] = 1; //Base Condition
@@ -12,5 +12,5 @@ function countBST(n: number): number {
 }
 console.log(
   "The total number of Binary Search Tree's by n value using Dynamic Programming apporach:",
-  countBST(10)
+  countBSTOfDP(10)
 );
