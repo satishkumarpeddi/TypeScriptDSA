@@ -8,37 +8,39 @@ A **Data Structures & Algorithms (DSA)** collection implemented in **TypeScript*
 
 ## 📌 About
 
-This repository contains a variety of core **data structure** and **algorithm** implementations written in TypeScript. It’s structured to help learners improve fundamentals in a strongly-typed language while practicing real-world solutions.
+This repository contains a variety of core **data structure** and **algorithm** implementations written in **TypeScript**. It’s designed to help you build strong fundamentals in DSA while benefiting from TypeScript’s static typing for safer and more maintainable code. :contentReference[oaicite:1]{index=1}
 
-It’s ideal for:
-- Developers preparing for coding interviews
-- Learners transitioning from JavaScript to TypeScript
-- Anyone wanting clear and well-typed DSA code
+Ideal for:
+- Developers preparing for technical interviews
+- Learners moving from JavaScript to TypeScript
+- Anyone wanting clear, well-typed DSA code examples
 
 ---
 
 ## 📂 Project Structure
 
-Here are the main folders you’ll find in this repo: :contentReference[oaicite:1]{index=1}
+Here are the main folders included in this repo: :contentReference[oaicite:2]{index=2}
 
 | Folder | Description |
 |--------|-------------|
 | `AVL/` | AVL Tree implementations (self-balancing BST) |
 | `ArrayOperations/` | Array-related algorithms and utilities |
-| `BinaryTreeStructuralFlow/` | Binary Tree structures and traversal methods |
+| `BinaryTreeCombinatorics/` | Combinatorics examples with Binary Trees |
+| `BinaryTreeStructuralCombinatorics/` | More combinatorics with structured trees |
+| `BinaryTreeStructuralFlow/` | Binary Tree traversal and structural flow code |
 
-*(Feel free to expand this table once more modules are added.)*
+_(Update this list as you add more modules or topics.)_ :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## 🧠 What’s Inside
 
 ✔ Strongly-typed implementations using TypeScript  
-✔ Basic to intermediate data structures  
-✔ Projects organized by topic for step-by-step learning  
-✔ Easy-to-read and reusable code
+✔ Core data structures like trees and arrays  
+✔ Modular and easy-to-read code  
+✔ Step-by-step learning for DSA concepts
 
-_TypeScript helps catch bugs at compile time and makes your DSA code safer and easier to maintain._ :contentReference[oaicite:2]{index=2}
+_TypeScript’s type system helps catch bugs earlier and makes the learning process smoother._ :contentReference[oaicite:4]{index=4}
 
 ---
 
