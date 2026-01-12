@@ -19,7 +19,7 @@ Ideal for:
 
 ## 📂 Project Structure
 
-Here are the main folders included in this repo: :contentReference[oaicite:2]{index=2}
+Here are the main folders included in this repo: 
 
 | Folder | Description |
 |--------|-------------|
@@ -27,9 +27,7 @@ Here are the main folders included in this repo: :contentReference[oaicite:2]{in
 | `ArrayOperations/` | Array-related algorithms and utilities |
 | `BinaryTreeCombinatorics/` | Combinatorics examples with Binary Trees |
 | `BinaryTreeStructuralCombinatorics/` | More combinatorics with structured trees |
-| `BinaryTreeStructuralFlow/` | Binary Tree traversal and structural flow code |
-
-_(Update this list as you add more modules or topics.)_ :contentReference[oaicite:3]{index=3}
+| `BinaryTreeStructuralFlow/` | Binary Tree traversal and structural flow code | 
 
 ---
 
